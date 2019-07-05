@@ -1,0 +1,16 @@
+# This command prints line with a specific word and gives the count of the word in the given file
+1. grep "are" sample_doc.txt && grep -r "are" sample_doc.txt | wc -l
+
+# find command helps to identify all the files in current working directory
+2. find . -type f -name "*.txt"
+
+# Selectively executes pwd in subdirectories
+3. for i in aws*; do (cd "$i" && pwd); done
+
+# sed command is used to replace word1 with word2 in hello.txt
+4. sed -i 's/word1/word2/g' hello.txt
+
+# jq command is used to parse the json present in s3_info.txt and find the key value of arn
+5. jq '.[] | .[0] | .["s3"] | .["bucket"].arn?' s3_info.txt
+
+ 
